@@ -1,0 +1,39 @@
+{
+  "name": "movies-explorer-api",
+  "version": "0.1.0",
+  "description": "Api for MoviesExploer diploma",
+  "main": "./src/app.js",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "node .",
+    "lint": "npx eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Allxy/movies-explorer-api.git"
+  },
+  "keywords": [
+    "api",
+    "nongodb",
+    "jwt"
+  ],
+  "author": "Alexey Klyuchnikov Allxy01@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Allxy/movies-explorer-api/issues"
+  },
+  "homepage": "https://github.com/Allxy/movies-explorer-api#readme",
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.4"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0"
+  }
+}
