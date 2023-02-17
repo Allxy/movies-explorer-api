@@ -40,5 +40,5 @@ app.use(celebrateErrorHandler());
 app.use(errorHandler);
 
 app.listen(config.PORT, () => {
-  logger.info(`Server starts at port ${config.PORT}`);
+  logger.info(`App listening on port ${config.PORT}`);
 });

@@ -2,13 +2,15 @@
   "name": "movies-explorer-api",
   "version": "0.1.0",
   "description": "Api for MoviesExploer diploma",
-  "main": "./src/app.mjs",
+  "main": "./src/server.mjs",
+  "type": "module",
   "scripts": {
     "dev": "nodemon",
     "start": "node .",
     "lint": "npx eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cross-env NODE_ENV=test jest"
   },
+  "jest": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Allxy/movies-explorer-api.git"
