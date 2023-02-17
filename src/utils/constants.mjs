@@ -5,6 +5,7 @@ export const UNAUTHORIZED_ERR_CODE = 401;
 export const BAD_REQUEST_ERR_CODE = 400;
 export const INTERNAL_SERVER_ERR_CODE = 500;
 
+export const MOVIE_NOT_FOUND = 'Movie not found';
 export const USER_NOT_FOUND = 'User not found';
 export const PAGE_NOT_FOUND = "Endpoint doesn't exists";
 export const USER_EXISTS = 'User is already exists';
@@ -15,5 +16,6 @@ export const BAD_TOKEN_TYPE = 'Bad token type';
 export const INTERNAL_ERROR = 'Something went wrong';
 export const NO_RIGHTS = 'You have no rights';
 export const BAD_ID = 'Invalid id';
+export const EMAIL_IS_BUSY = 'Email is busy';
 
 export const CREATED_CODE = 201;

@@ -1,4 +1,5 @@
 import jwt from 'jsonwebtoken';
+import config from '../utils/config.mjs';
 import {
   AUTH_REQUIRED,
   BAD_TOKEN,
@@ -19,7 +20,7 @@ export default function auth(request, resource, next) {
     }
 
     const token = authorization.replace('Bearer ', '');
-    const payload = jwt.verify(token, process.env.JWT_SECRET);
+    const payload = jwt.verify(token, config.JWT_KEY);
 
     request.user = payload;
   } catch (error) {

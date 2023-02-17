@@ -1,6 +1,7 @@
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import UserModel from '../models/user.model.mjs';
+import config from '../utils/config.mjs';
 import { AUTH_ERROR, CREATED_CODE, USER_EXISTS } from '../utils/constants.mjs';
 import { ConflictError, UnauthorizedError } from '../utils/errors/index.mjs';
 
@@ -44,7 +45,7 @@ async function signin(request, response, next) {
       throw new UnauthorizedError(AUTH_ERROR);
     }
 
-    const token = jwt.sign({ _id: user.id }, process.env.JWT_SECRET);
+    const token = jwt.sign({ _id: user.id }, config.JWT_KEY);
 
     response.send({ token });
   } catch (error) {

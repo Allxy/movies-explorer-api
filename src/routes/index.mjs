@@ -4,11 +4,13 @@ import { PAGE_NOT_FOUND } from '../utils/constants.mjs';
 import NotFoundError from '../utils/errors/NotFoundError.mjs';
 import authRouter from './auth.router.mjs';
 import userRouter from './user.router.mjs';
+import movieRouter from './movie.router.mjs';
 
 const router = Router();
 
-router.use('/', authRouter);
+router.use('', authRouter);
 router.use('/users', auth, userRouter);
+router.use('/movies', auth, movieRouter);
 router.use('*', (req, res, next) => next(new NotFoundError(PAGE_NOT_FOUND)));
 
 export default router;

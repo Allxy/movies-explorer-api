@@ -1,16 +1,12 @@
-import cookieParser from 'cookie-parser';
+import { errors as celebrateErrorHandler } from 'celebrate';
 import cors from 'cors';
 import express, { json } from 'express';
 import helmet from 'helmet';
 import mongoose from 'mongoose';
-
-import { errors as celebrateErrorHandler } from 'celebrate';
-
 import errorLog from './middlewares/errlog.middleware.mjs';
 import errorHandler from './middlewares/error.middleware.mjs';
-import requestLogger from './middlewares/reqlog.middleware.mjs';
-
 import limiter from './middlewares/limiter.middleware.mjs';
+import requestLogger from './middlewares/reqlog.middleware.mjs';
 import router from './routes/index.mjs';
 import config from './utils/config.mjs';
 import logger from './utils/logger.mjs';
@@ -37,7 +33,6 @@ app.use(requestLogger);
 app.use(limiter);
 app.use(helmet());
 app.use(json());
-app.use(cookieParser());
 app.use(cors(corsOptions));
 app.use('/', router);
 app.use(errorLog);
