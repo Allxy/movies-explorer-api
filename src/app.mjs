@@ -15,7 +15,6 @@ const app = express();
 
 const whitelist = [
   'http://localhost:4000',
-  '62.84.115.227',
   'http://moexp.nomoredomains.work/',
   'https://moexp.nomoredomains.work/',
 ];
