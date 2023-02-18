@@ -1,5 +1,7 @@
 # Проект Movies Explorer API
 
+[Адрес API](https://api.moexp.nomoredomains.work/)
+
 ## Директории
 
 `/routes` — папка с файлами роутера
