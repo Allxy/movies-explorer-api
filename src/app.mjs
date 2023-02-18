@@ -13,7 +13,12 @@ import logger from './utils/logger.mjs';
 
 const app = express();
 
-const whitelist = ['http://localhost:4000'];
+const whitelist = [
+  'http://localhost:4000',
+  '62.84.115.227',
+  'http://moexp.nomoredomains.work/',
+  'https://moexp.nomoredomains.work/',
+];
 const corsOptions = {
   origin(origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
