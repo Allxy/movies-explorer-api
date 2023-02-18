@@ -2,7 +2,7 @@
   "name": "movies-explorer-api",
   "version": "0.1.0",
   "description": "Api for MoviesExploer diploma",
-  "main": "./src/server.mjs",
+  "main": "./src/app.mjs",
   "type": "module",
   "scripts": {
     "dev": "nodemon",
