@@ -1,0 +1,50 @@
+{
+  "name": "movies-explorer-api",
+  "version": "0.1.0",
+  "description": "Api for MoviesExploer diploma",
+  "main": "./src/app.mjs",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "node .",
+    "lint": "npx eslint .",
+    "test": "cross-env NODE_ENV=test jest"
+  },
+  "jest": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Allxy/movies-explorer-api.git"
+  },
+  "keywords": [
+    "api",
+    "nongodb",
+    "jwt"
+  ],
+  "author": "Alexey Klyuchnikov Allxy01@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Allxy/movies-explorer-api/issues"
+  },
+  "homepage": "https://github.com/Allxy/movies-explorer-api#readme",
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.4"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "celebrate": "^15.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.7.0",
+    "express-winston": "^4.2.0",
+    "helmet": "^6.0.1",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.9.2",
+    "validator": "^13.9.0",
+    "winston": "^3.8.2"
+  }
+}
