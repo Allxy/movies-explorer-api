@@ -14,13 +14,18 @@ router.post(
       duration: Joi.number().required(),
       year: Joi.string().required(),
       description: Joi.string().required(),
-      image: Joi.string().uri({ scheme: ['http', 'https'] }),
-      trailerLink: Joi.string().uri({ scheme: ['http', 'https'] }),
-      thumbnail: Joi.string().uri({ scheme: ['http', 'https'] }),
-      owner: Joi.string().length(24).hex(),
+      image: Joi.string()
+        .required()
+        .uri({ scheme: ['http', 'https'] }),
+      trailerLink: Joi.string()
+        .required()
+        .uri({ scheme: ['http', 'https'] }),
+      thumbnail: Joi.string()
+        .required()
+        .uri({ scheme: ['http', 'https'] }),
       nameRU: Joi.string().required(),
       nameEN: Joi.string().required(),
-      movieId: Joi.string().required(),
+      movieId: Joi.number().required(),
     }),
   }),
   MovieController.createMovie,

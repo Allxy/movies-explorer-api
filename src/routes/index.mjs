@@ -9,7 +9,8 @@ import movieRouter from './movie.router.mjs';
 const router = Router();
 
 router.use('', authRouter);
-router.use('/users', auth, userRouter);
+router.use(auth);
+router.use('/users', userRouter);
 router.use('/movies', auth, movieRouter);
 router.use('*', (req, res, next) => next(new NotFoundError(PAGE_NOT_FOUND)));
 

@@ -1,4 +1,5 @@
 import { Schema, model, Types } from 'mongoose';
+import validator from 'validator';
 
 const movieSchema = new Schema(
   {
@@ -15,7 +16,7 @@ const movieSchema = new Schema(
       required: true,
     },
     year: {
-      type: Number,
+      type: String,
       required: true,
     },
     description: {
@@ -25,14 +26,26 @@ const movieSchema = new Schema(
     image: {
       type: String,
       required: true,
+      validate: {
+        validator: (value) => validator.isURL(value),
+        message: (props) => `${props.value} is not a valid URL!`,
+      },
     },
     trailerLink: {
       type: String,
       required: true,
+      validate: {
+        validator: (value) => validator.isURL(value),
+        message: (props) => `${props.value} is not a valid URL!`,
+      },
     },
     thumbnail: {
       type: String,
       required: true,
+      validate: {
+        validator: (value) => validator.isURL(value),
+        message: (props) => `${props.value} is not a valid URL!`,
+      },
     },
     owner: {
       type: Types.ObjectId,
@@ -40,7 +53,7 @@ const movieSchema = new Schema(
       ref: 'user',
     },
     movieId: {
-      type: Types.ObjectId,
+      type: Number,
       required: true,
     },
     nameRU: {
