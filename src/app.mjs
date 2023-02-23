@@ -15,8 +15,8 @@ const app = express();
 
 const whitelist = [
   'http://localhost:4000',
-  'http://moexp.nomoredomains.work/',
-  'https://moexp.nomoredomains.work/',
+  'http://moexp.nomoredomains.work',
+  'https://moexp.nomoredomains.work',
 ];
 const corsOptions = {
   origin(origin, callback) {
